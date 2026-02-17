@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelo Cordoba | Portafolio</title>
+    <link rel="icon" href="Imagenes/logo personal.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img class="logo-imagen" src="Imagenes/logo personal.png" alt="logo"> 
+            Angelo Cordoba</div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#sobre-mi">Perfil</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button id="tema-pagina">
+            <ion-icon name="contrast"></ion-icon>
+        </button>
+
+        <button class="menu-toggle" id="menu-toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </button>
+    </nav>
+    <section class="inicio">
+        <div class="inicio-contenido">
+            <div class="inicio-imagen">
+                <img src="Imagenes/foto.png" alt="fotografia">
+            </div>
+            <div class="inicio-texto">
+                <h1>Angelo de Jesus Cordoba Rocha</h1>
+                <h2>Desarrollador Web Junior | Interfaces web</h2>
+                <p class="inicio-parrafo">Construyo interfaces web funcionales, limpias y centradas en la experiencia del usuario transformando ideas en soluciones digitales claras y eficientes</p>
+            </div>
+
+            <div class="inicio-botones">
+                <a href="#proyectos" class="btn btn-primario">Ver proyectos</a>
+                <a href="docs/CV-Angelo.pdf" class="btn btn-secundario" download>Descargar CV</a>
+            </div>
+
+        </div>
+    </section>
+    <section id="sobre-mi" class="sobre-mi">
+    <div class="sobremi-contenedor">
+        <div class="perfil-header">
+            <h2>Perfil</h2>
+            <div class="separador"></div>
+        </div>
+        
+        <p class="perfil-descripcion">
+            Soy un apasionado del desarrollo de software con un enfoque en crear webs que no solo funcionen, sino que <strong>Escalen</strong>. 
+            Me especializo en resolver desafíos de arquitectura y optimizar el rendimiento para ofrecer la mejor experiencia de usuario. 
+            No solo escribo código; construyo soluciones que impulsan objetivos de negocio.
+        </p>
+        <br><br>
+        <div class="perfil-stats">
+            <div class="stat-card">
+                <ion-icon name="ribbon-outline" class="stat-icon"></ion-icon>
+                <h4>+6 Meses</h4>
+                <p>Experiencia</p>
+            </div>
+            <div class="stat-card">
+                <ion-icon name="git-network-outline" class="stat-icon"></ion-icon>
+                <h4>+5 Proyectos</h4>
+                <p>Completados</p>
+            </div>
+            <div class="stat-card">
+                <ion-icon name="cog-outline" class="stat-icon"></ion-icon>
+                <h4>Metodología</h4>
+                <p>Agile / Scrum</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <h3 class="h3-stack">Estudios Realizados</h3>
+        <div class="estudios" id="estudios">
+            <div class="estudio-card">
+                <ion-icon name="school-outline" class="stat-icon"></ion-icon>
+                <h3>Ingenieria de Sistemas</h3>
+                <p>Estudiante activo - 5° semestre <br>
+                Cursnado actualmente, con un enfoque en desarrollo web y arquitectura de software  </p>
+            </div>
+            <div class="estudio-card">
+                <ion-icon name="library-outline" class="stat-icon"></ion-icon>
+                <h3>Tecnologo en Analisis y Desarrollo de Software</h3>
+                <p>Titulo culminado <br>
+                Bases sólidas en programación, análisis y metodologías ágiles.</p>
+            </div>
+        </div>
+        <br> <br>
+        <h3 class="h3-stack">Stack tecnologico</h3>
+       <div class="habilidades-contenedor">
+            <div class="habilidad">
+                <ion-icon name="logo-html5" class="skill-icon"></ion-icon>
+                <h4>HTML5</h4>
+                <p>Estructura semántica y accesible</p>
+            </div>
+
+            <div class="habilidad">
+                <ion-icon name="logo-css3" class="skill-icon"></ion-icon>
+                <h4>CSS3</h4>
+                <p>Diseño responsive y animaciones modernas</p>
+            </div>
+            <div class="habilidad">
+                <ion-icon name="logo-javascript" class="skill-icon"></ion-icon>
+                <h4>Javascript</h4>
+                <p>Interactividad y manipulacion DOM</p>
+            </div>
+            <div class="habilidad">
+                <ion-icon name="logo-github" class="skill-icon"></ion-icon>
+                <h4>Git / GitHub</h4>
+                <p>Control de versiones y trabajo colaborativo</p>
+            </div>
+       </div>
+    </div>
+    </section>
+   <section id="proyectos" class="proyectos">
+    <h2 class="h3-stack">Proyectos</h2>
+    <div class="proyectos-grid">
+        <div class="proyecto-card">
+            <div class="img-container">
+                <img src="Imagenes/RelojDigital.png" alt="reloj" class="imagen-card">
+            </div>
+            <h3>Reloj Digital</h3>
+            <p>He creado este componente de reloj digital para practicar la manipulación dinámica del tiempo en el navegador. Con un contraste de colores vibrantes y una tipografía clara, prioriza la legibilidad y el diseño adaptativo. 
+            <br> ¡Un pequeño elemento que aporta mucho dinamismo a cualquier interfaz!</p>
+            <a href="https://angelocordoba.github.io/reloj-Digital/" class="btn btn-primario" target="_blank">Ver Proyecto</a>
+            <a href="https://github.com/Angelocordoba/reloj-Digital.git" class="btn btn-secundario" target="_blank">Ver Repoitorio</a>
+        </div>
+        
+        <div class="proyecto-card">
+            <div class="img-container">
+                <img src="Imagenes/AplicacionPresupuesto.png" alt="reloj" class="imagen-card">
+            </div>
+            <h3>Aplicacion Presupuesto</h3>
+            <p>Realice una aplicación de presupuesto construida con JavaScript utilizando clases y herencia para estructurar ingresos y egresos. Calcula dinámicamente totales y porcentajes, aplicando principios de Programación Orientada a Objetos para una arquitectura organizada y escalable.</p>
+            <a href="https://angelocordoba.github.io/AplicacionPresupuesto/" class="btn btn-primario" target="_blank">Ver Proyecto</a>
+            <a href="https://github.com/Angelocordoba/AplicacionPresupuesto.git" class="btn btn-secundario" target="_blank">Ver Repoitorio</a>
+        </div>
+
+        <div class="proyecto-card">
+            <div class="img-container">
+                <img src="Imagenes/AplicacionVistantes.png" alt="reloj" class="imagen-card">
+            </div>
+            <h3>Aplicacion de Ingreso Universidad del Tolima</h3>
+            <p>Realice una aplicación de Ingreso a la universida del Tolima, la cual comunica las diferentes dependencias, creando sus propias credenciales de ingreso, ademas de conectar los equipos de trabajo asignados, esta app web permite tener un control de las personas que ingresa y poder tener un seguimiento a las personas y funcionarios que se encuentran dentro de la institucion, conectado con supabase como base de datos y trabajado con NEXT.js</p>
+            <a href="https://github.com/Angelocordoba/Proyecto_Registro_UT.git" class="btn btn-secundario" target="_blank">Ver Repoitorio</a>
+        </div>
+    </div>
+</section>
+
+<section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <form class="formulario">
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu correo" required>
+        <textarea placeholder="Tu mensaje" required></textarea>
+        <button type="submit" class="btn btn-primario">Enviar mensaje</button>
+    </form>
+</section>
+    <a href="https://wa.me/573228187874?text=Hola%20¿Como estas?. %20Vi%20tu%20portafolio%20y%20me%20gustaría%20conversar%20contigo." 
+    class="whatsapp-btn" 
+    target="_blank" 
+    rel="noopener noreferrer">
+        <div class="whatsapp-tooltip">¿Tienes interes en mi Hoja de Vida? ¡Hablemos!</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+    <script src="js/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+</body>
+</html>

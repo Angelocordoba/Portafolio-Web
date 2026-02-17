@@ -1,0 +1,638 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --bg-color: #f8fafc;
+    --text-primary: #1e293b;
+    --text-secondario: #475569;
+    --accent: #2563eb;
+}
+.modo-oscuro{
+    --bg-color: #0f172a;
+    --text-primary: #f1f5f9;
+    --text-secondario: #cbd5e1;
+    --accent: #3b82f6;
+}
+
+body{
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    color: var(--text-primary);
+    transition: background 0.3s ease, color 0.3s ease;
+
+    background:
+        linear-gradient(
+            rgba(248, 250, 252, 0.92),
+            rgba(248, 250, 252, 0.92)
+        ),
+        url("../Imagenes/fondoModoClaro.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body.modo-oscuro{
+    background:
+        linear-gradient(
+            rgba(15, 23, 42, 0.82),
+            rgba(15, 23, 42, 0.82)
+        ),
+        url("../Imagenes/modoOscuros.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1{
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+
+h2{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: var(--text-secondario);
+}
+
+.inicio{
+    padding: 140px 10%;
+    display: flex;
+    align-items: center;
+    min-height: auto;
+}
+
+.inicio-contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+    width: 100%;
+}
+
+.inicio-imagen img{
+    width: 380px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    list-style: none;
+}
+
+.inicio-texto{
+    max-width: 600px;
+    color: var(--text-secondario);
+}
+.inicio-parrafo{
+    font-size: 1.3rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: nowrap; 
+    overflow: visible; 
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+
+.modo-oscuro .navbar{
+    background: rgba(15, 23, 42, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.logo{
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-primary);
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: var(--accent);
+    transition: 0.3s ease
+}
+
+.logo-imagen{
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 10px;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+.nav-links a:hover{
+    color: var(--accent);
+}
+
+.modo-oscuro .nav-links a{
+    color: var(--accent);
+}
+
+.modo-oscuro .nav-links a:hover{
+    color: white;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    
+}
+
+.inicio-botones{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn{
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.modo-oscuro .btn-primario{
+    background-color: var(--accent);
+    color: black;
+}
+
+.btn-primario{
+    background-color: var(--accent);
+    color: white;
+}
+
+.btn-primario:hover{
+    transform: translatey(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.modo-oscuro .btn-primario:hover{
+    transform: translatey(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.btn-secundario{
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn-secundario:hover{
+    transform: translatey(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.modo-oscuro .btn-secundario:hover{
+    transform: translatey(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.sobre-mi{
+    padding: 60px 10%;
+    text-align: center;
+    
+}
+
+.sobre-mi h2{
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.perfil-header{
+    margin-bottom: 30px;
+}
+
+.separador{
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.perfil-descripcion{
+    max-width: 2000px;
+    margin: 0 auto 50px;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--text-secondario);
+}
+
+.perfil-stats{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.stat-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.modo-oscuro .stat-card{
+    background: var(--bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.stat-card:hover{
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+
+.stat-icon{
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stat-card h4{
+    font-size: 1.3rem;
+    color: var(--text-secondario);
+    margin: 5px 0;
+}
+.stat-card p{
+    font-size: 1rem;
+    color: var(--text-secondario);
+}
+
+.habilidades-contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+.estudios{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+.estudio-card{
+    background: var(--bg-color);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+.modo-oscuro .estudio-card{
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.estudio-card:hover{
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+.estudio-card h3{
+    font-size: 1.4rem;
+    margin: 15px 0 5px;
+}
+
+.estudio-card p {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.estudio-card small{
+    display: block;
+    margin-top: 10px;
+    color: var(--text-secondario);
+}
+
+.habilidad{
+    background: var(--bg-color);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.modo-oscuro .habilidad{
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.habilidad:hover{
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+.modo-oscuro .habilidad:hover{
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+}
+
+.skill-icon{
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.habilidad h4{
+    margin: 10px 0 5px;
+    font-size: 1.5rem;
+}
+
+.habilidad p{
+    font-size: 0.85rem;
+    color: var(--text-secondario);
+}
+
+.h3-stack{
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.h3-stack::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.proyectos{
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.proyectos-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px
+}
+
+.proyecto-card{
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.proyecto-card p{
+    flex-grow: 1;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    color: var(--text-secondario);
+}
+
+.modo-oscuro .proyecto-card{
+    background-color: #1e293b ;
+}
+
+.proyecto-card:hover{
+    transform: translateY(-5px);
+}
+
+.proyecto-card:hover .reloj-digital{
+    transform: scale(1.05);
+}
+.imagen-card{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    background: none;
+}
+
+.contacto{
+    padding: 100px 10%;
+    text-align: center;
+}
+.formulario{
+    max-width: 500px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario input,
+.formulario textarea{
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.formulario textarea{
+    resize: none;
+    height: 120px;
+}
+
+
+@media (max-width: 992px){
+
+    .nav-links {
+        display: none; 
+    }
+
+    .nav-links.active {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 33vh;
+        background: var(--bg-color);
+        flex-direction: column;
+        padding-top: 80px;
+        transform: translateX(0);
+        z-index: 1100;
+        align-items: center;
+    }
+
+   
+    .menu-toggle {
+        display: flex !important; 
+        order: 3; 
+        margin-left: 10px;
+    }
+
+    #tema-pagina {
+        order: 2; 
+        margin-left: auto; 
+    }
+
+    .logo {
+        order: 1;
+        flex-shrink: 1; 
+    }
+
+    .inicio-contenido{
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .inicio-imagen img{
+        width: 280px;
+    }
+
+    .inicio-texto{
+        max-width: 100%;
+    }
+
+    .inicio-botones{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-btn img {
+    width: 35px;
+    height: 35px;
+}
+
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 75px;
+    background-color: white;
+    color: #1e293b;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modo-oscuro .whatsapp-tooltip {
+    background-color: #1e293b;
+    color: white;
+}
+
+.whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 6px solid white;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    background-color: #20ba5a;
+}
+
+.whatsapp-btn:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+    right: 70px;
+}
+
+@keyframes pulse-whatsapp {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+#tema-pagina{
+    padding: 8px 10px;
+    background-color: transparent;
+    border: none;
+    display: block;
+    font-size: 2rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: end;
+
+}
+
+.menu-toggle{
+    display:none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    z-index: 1100;
+    position: relative;
+
+}
+
+.menu-toggle ion-icon{
+    display: block;
+    font-size: 35px;
+    color: var(--text-primary);
+    min-width: 35px;
+    min-height: 35px;
+    pointer-events: none;
+}
